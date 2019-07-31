@@ -19,11 +19,15 @@
             </p>
             <form action="form-field">
                 <fieldset>
-                    <input type="text">
-                    <input type="text">
-                    <input type="phone">
-                    <input type="email">
-                    <input type="checkbox" name="" id="checkbox"> <label for="checkbox">Договор <a>офферты</a></label>
+                    <select name="country" id="country">
+                        <option value="Беларусь">Беларусь</option>
+                        <option value="Беларусь">Беларусь</option>
+                        <option value="Беларусь">Беларусь</option>                        
+                    </select>
+                    <input type="text" placeholder="Ваше имя" required>
+                    <input type="phone" placeholder="Телефон" required>
+                    <input type="email" placeholder="E-mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+                    <div class="checkbox"><input type="checkbox" name="" id="checkbox" checked>Договор <a>офферты</a></div>
                     <input type="submit" value="ЗАПИСАТЬСЯ">
                 </fieldset>
             </form>

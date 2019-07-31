@@ -1,1 +1,154 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+body {
+  margin: 0;
+  padding: 0;
+  max-width: 1920px;
+  max-height: 1040px;
+}
+
+.menu {
+  height: 10em;
+}
+
+@-webkit-keyframes leftShift {
+  0% {
+    -webkit-transform: translateX(-500px);
+            transform: translateX(-500px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes leftShift {
+  0% {
+    -webkit-transform: translateX(-500px);
+            transform: translateX(-500px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes rightShift {
+  0% {
+    -webkit-transform: translateX(2500px);
+            transform: translateX(2500px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes rightShift {
+  0% {
+    -webkit-transform: translateX(2500px);
+            transform: translateX(2500px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+.gradient {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 10%;
+  background: linear-gradient(114.91deg, #F9F9F9 1.06%, #E1E8F0 36.64%);
+}
+
+.gradient .laptop {
+  width: 50%;
+  height: 30em;
+  background: url("./assets/mac-sect1.png") no-repeat;
+  background-size: contain;
+  -webkit-animation-name: leftShift;
+          animation-name: leftShift;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+.gradient .info {
+  width: 30%;
+  margin-right: 15%;
+  -webkit-animation-name: rightShift;
+          animation-name: rightShift;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+.gradient .info h1 {
+  margin: 0;
+  color: #FF7302;
+}
+
+.gradient .info h2 {
+  margin: 0;
+  color: #2B2B51;
+}
+
+fieldset {
+  background: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+}
+
+fieldset select {
+  width: 40%;
+  margin-left: 5%;
+  height: 2em;
+  border: none;
+  border-bottom: 1px solid gray;
+}
+
+fieldset input {
+  width: 40%;
+  height: 2em;
+  border: none;
+  border-bottom: 1px solid gray;
+  margin-left: 5%;
+  font-weight: bold;
+}
+
+fieldset .checkbox {
+  -webkit-box-ordinal-group: 6;
+      -ms-flex-order: 5;
+          order: 5;
+}
+
+input[type="submit"] {
+  color: white;
+  background: #0073F0;
+  border: none;
+  border-radius: 4em;
+  height: 3em;
+}
+
+input[type="submit"]:hover {
+  background: linear-gradient(-45deg, #0073F0, #2B2B51);
+}
+/*# sourceMappingURL=style.css.map */
