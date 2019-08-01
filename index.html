@@ -10,7 +10,9 @@
 <body>
     <nav class="menu"></nav>
     <div class="gradient">
-        <div class="laptop"></div>
+        <div class="laptop">
+            <div class="big"></div>
+        </div>
         <div class="info">
             <h1>Такой заголовок</h1>
             <h2>примерный подзаголовок</h2>
@@ -19,14 +21,26 @@
             </p>
             <form action="form-field">
                 <fieldset>
+                    <div class="select">
+                    <label for="country"><span class="country">Ваша страна</span></label>
                     <select name="country" id="country">
                         <option value="Беларусь">Беларусь</option>
                         <option value="Беларусь">Беларусь</option>
                         <option value="Беларусь">Беларусь</option>                        
                     </select>
-                    <input type="text" placeholder="Ваше имя" required>
-                    <input type="phone" placeholder="Телефон" required>
-                    <input type="email" placeholder="E-mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+                    </div>
+                    <div class="input">
+                        <label for="name"><span class="name">Ваше имя</span></label>
+                        <input type="text" id='name' required>
+                    </div>
+                    <div class="input">
+                        <label for="phone"><span class="phone">Телефон</span></label>
+                        <input type="phone" id='phone' required>
+                    </div>
+                    <div class="input">
+                        <label for="email"><span class="email">E-mail</span></label>
+                        <input type="email" id='email' pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+                    </div>              
                     <div class="checkbox"><input type="checkbox" name="" id="checkbox" checked>Договор <a>офферты</a></div>
                     <input type="submit" value="ЗАПИСАТЬСЯ">
                 </fieldset>

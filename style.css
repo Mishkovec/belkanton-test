@@ -6,7 +6,7 @@ body {
 }
 
 .menu {
-  height: 10em;
+  height: 6.5em;
 }
 
 @-webkit-keyframes leftShift {
@@ -64,6 +64,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
+  border-top: 5px solid #2B2B51;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -72,8 +73,18 @@ body {
 }
 
 .gradient .laptop {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 50%;
-  height: 30em;
+  height: 41.5em;
+  margin-top: -4em;
   background: url("./assets/mac-sect1.png") no-repeat;
   background-size: contain;
   -webkit-animation-name: leftShift;
@@ -82,9 +93,23 @@ body {
           animation-duration: 1s;
 }
 
+.gradient .laptop .big {
+  width: 50%;
+  height: 19em;
+  background: url("./assets/sect1-zoom.png") no-repeat;
+  background-size: contain;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin-left: 49%;
+  margin-bottom: 13%;
+}
+
 .gradient .info {
-  width: 30%;
-  margin-right: 15%;
+  width: 32%;
+  margin-right: 20%;
+  margin-top: -4%;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
   -webkit-animation-name: rightShift;
           animation-name: rightShift;
   -webkit-animation-duration: 1s;
@@ -94,14 +119,32 @@ body {
 .gradient .info h1 {
   margin: 0;
   color: #FF7302;
+  font-size: 3em;
 }
 
 .gradient .info h2 {
   margin: 0;
   color: #2B2B51;
+  font-size: 3em;
 }
 
-fieldset {
+.gradient .info p {
+  margin-top: 10%;
+  font-size: 1.3em;
+  word-spacing: 5%;
+}
+
+form {
+  margin-top: 5%;
+  -webkit-transform: rotate(2.5deg);
+          transform: rotate(2.5deg);
+  background: #F7F7F7;
+}
+
+form fieldset {
+  -webkit-transform: rotate(-2.5deg);
+          transform: rotate(-2.5deg);
+  position: relative;
   background: white;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -117,35 +160,90 @@ fieldset {
   width: 100%;
 }
 
-fieldset select {
+form fieldset .select {
   width: 40%;
   margin-left: 5%;
   height: 2em;
+}
+
+form fieldset .select select {
+  width: 100%;
+  height: 2em;
+  margin-top: 3%;
   border: none;
   border-bottom: 1px solid gray;
 }
 
-fieldset input {
-  width: 40%;
-  height: 2em;
-  border: none;
-  border-bottom: 1px solid gray;
-  margin-left: 5%;
-  font-weight: bold;
+form fieldset .select:hover .country {
+  margin-top: 2%;
+  font-size: 0.8em;
 }
 
-fieldset .checkbox {
+form fieldset .input {
+  width: 40%;
+  height: 3em;
+  border: none;
+  margin-left: 5%;
+  margin-top: 3%;
+  font-weight: 100;
+}
+
+form fieldset .input input {
+  width: 100%;
+  height: 2.5em;
+  border: none;
+  border-bottom: 1px solid gray;
+}
+
+form fieldset .input:hover .phone, form fieldset .input:hover .name, form fieldset .input:hover .email {
+  margin-top: 2%;
+  font-size: 0.8em;
+}
+
+form fieldset .country {
+  position: absolute;
+  top: 0.2em;
+  left: 4.5em;
+}
+
+form fieldset .name {
+  position: absolute;
+  top: 0.2em;
+}
+
+form fieldset .phone {
+  position: absolute;
+  top: 4.5em;
+}
+
+form fieldset .email {
+  position: absolute;
+  top: 4.5em;
+}
+
+form fieldset .checkbox {
   -webkit-box-ordinal-group: 6;
       -ms-flex-order: 5;
           order: 5;
+  width: 40%;
+  margin-top: 3%;
+  margin-left: 5%;
+}
+
+form fieldset .checkbox a {
+  color: #2B2B51;
+  text-decoration: underline;
 }
 
 input[type="submit"] {
+  width: 40%;
   color: white;
   background: #0073F0;
   border: none;
   border-radius: 4em;
   height: 3em;
+  margin-left: 5%;
+  margin-top: 3%;
 }
 
 input[type="submit"]:hover {
