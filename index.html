@@ -10,8 +10,7 @@
 <body>
     <nav class="menu"></nav>
     <div class="gradient">
-        <div class="laptop">
-            <div class="big"></div>
+        <div class="laptop">            
         </div>
         <div class="info">
             <h1>Такой заголовок</h1>
@@ -20,13 +19,13 @@
                 Сайт рыбатекст поможет дизайнеру, <b>верстальщику</b>, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему <b>оратору отточить навык</b>
             </p>
             <form action="form-field">
-                <fieldset>
+                <fieldset id="form">
                     <div class="select">
                     <label for="country"><span class="country">Ваша страна</span></label>
                     <select name="country" id="country">
                         <option value="Беларусь">Беларусь</option>
-                        <option value="Беларусь">Беларусь</option>
-                        <option value="Беларусь">Беларусь</option>                        
+                        <option value="Россия">Россия</option>
+                        <option value="Казахстан">Казахстан</option>                        
                     </select>
                     </div>
                     <div class="input">
@@ -42,10 +41,12 @@
                         <input type="email" id='email' pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
                     </div>              
                     <div class="checkbox"><input type="checkbox" name="" id="checkbox" checked>Договор <a>офферты</a></div>
-                    <input type="submit" value="ЗАПИСАТЬСЯ">
+                    <input type="submit" value="ЗАПИСАТЬСЯ" id='btn'>
                 </fieldset>
             </form>
         </div>
     </div>
+    <footer class="footer"></footer>
+    <script src="./index.js"></script>
 </body>
 </html>

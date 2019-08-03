@@ -1,11 +1,18 @@
+@charset "UTF-8";
 body {
   margin: 0;
   padding: 0;
   max-width: 1920px;
-  max-height: 1040px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.menu {
+h3 {
+  font-size: 3em;
+  color: #FF7302;
+}
+
+.menu, .footer {
   height: 6.5em;
 }
 
@@ -93,17 +100,6 @@ body {
           animation-duration: 1s;
 }
 
-.gradient .laptop .big {
-  width: 50%;
-  height: 19em;
-  background: url("./assets/sect1-zoom.png") no-repeat;
-  background-size: contain;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-  margin-left: 49%;
-  margin-bottom: 13%;
-}
-
 .gradient .info {
   width: 32%;
   margin-right: 20%;
@@ -163,13 +159,14 @@ form fieldset {
 form fieldset .select {
   width: 40%;
   margin-left: 5%;
-  height: 2em;
+  height: 1em;
 }
 
 form fieldset .select select {
   width: 100%;
   height: 2em;
   margin-top: 3%;
+  font-size: 1.2em;
   border: none;
   border-bottom: 1px solid gray;
 }
@@ -191,6 +188,7 @@ form fieldset .input {
 form fieldset .input input {
   width: 100%;
   height: 2.5em;
+  font-size: 1.2em;
   border: none;
   border-bottom: 1px solid gray;
 }
@@ -202,23 +200,23 @@ form fieldset .input:hover .phone, form fieldset .input:hover .name, form fields
 
 form fieldset .country {
   position: absolute;
-  top: 0.2em;
+  top: 1em;
   left: 4.5em;
 }
 
 form fieldset .name {
   position: absolute;
-  top: 0.2em;
+  top: 1em;
 }
 
 form fieldset .phone {
   position: absolute;
-  top: 4.5em;
+  top: 5.5em;
 }
 
 form fieldset .email {
   position: absolute;
-  top: 4.5em;
+  top: 5.5em;
 }
 
 form fieldset .checkbox {
@@ -226,6 +224,7 @@ form fieldset .checkbox {
       -ms-flex-order: 5;
           order: 5;
   width: 40%;
+  font-size: 1.2em;
   margin-top: 3%;
   margin-left: 5%;
 }
@@ -237,16 +236,45 @@ form fieldset .checkbox a {
 
 input[type="submit"] {
   width: 40%;
+  height: 3em;
   color: white;
   background: #0073F0;
   border: none;
   border-radius: 4em;
-  height: 3em;
+  font-size: 1.2em;
   margin-left: 5%;
   margin-top: 3%;
 }
 
 input[type="submit"]:hover {
   background: linear-gradient(-45deg, #0073F0, #2B2B51);
+}
+
+@media only screen and (max-width: 1360px) {
+  .gradient {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .gradient .laptop {
+    width: 90%;
+    margin-top: 10%;
+    -webkit-animation: none;
+            animation: none;
+    background-image: url("./assets/Ноут.png");
+  }
+  .gradient .info {
+    width: 70%;
+    margin: 0;
+    -ms-flex-item-align: initial;
+        -ms-grid-row-align: initial;
+        align-self: initial;
+    -webkit-animation: none;
+            animation: none;
+  }
+  .gradient .info h1, .gradient .info h2, .gradient .info p {
+    text-align: center;
+  }
 }
 /*# sourceMappingURL=style.css.map */
