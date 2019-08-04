@@ -139,8 +139,14 @@ form {
 }
 
 form fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
   -webkit-transform: rotate(-2.5deg);
           transform: rotate(-2.5deg);
+}
+
+form fieldset .container {
   position: relative;
   background: white;
   display: -webkit-box;
@@ -154,30 +160,37 @@ form fieldset {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  width: 100%;
 }
 
-form fieldset .select {
+form fieldset .container .select {
+  margin: 0;
+  padding: 0;
+  border: 0;
   width: 40%;
   margin-left: 5%;
   height: 1em;
 }
 
-form fieldset .select select {
+form fieldset .container .select select {
   width: 100%;
   height: 2em;
   margin-top: 3%;
   font-size: 1.2em;
   border: none;
   border-bottom: 1px solid gray;
+  outline-color: transparent;
 }
 
-form fieldset .select:hover .country {
+form fieldset .container .select:hover .country {
   margin-top: 2%;
   font-size: 0.8em;
 }
 
-form fieldset .input {
+form fieldset .container .input {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: 0;
   width: 40%;
   height: 3em;
   border: none;
@@ -186,41 +199,42 @@ form fieldset .input {
   font-weight: 100;
 }
 
-form fieldset .input input {
+form fieldset .container .input input {
   width: 100%;
   height: 2.5em;
   font-size: 1.2em;
   border: none;
   border-bottom: 1px solid gray;
+  outline-color: transparent;
 }
 
-form fieldset .input:hover .phone, form fieldset .input:hover .name, form fieldset .input:hover .email {
+form fieldset .container .input:hover .phone, form fieldset .container .input:hover .name, form fieldset .container .input:hover .email {
   margin-top: 2%;
   font-size: 0.8em;
 }
 
-form fieldset .country {
+form fieldset .container .country {
   position: absolute;
-  top: 1em;
-  left: 4.5em;
+  top: 0.8em;
+  left: 4em;
 }
 
-form fieldset .name {
+form fieldset .container .name {
   position: absolute;
-  top: 1em;
+  top: 0.8em;
 }
 
-form fieldset .phone {
+form fieldset .container .phone {
   position: absolute;
-  top: 5.5em;
+  top: 5em;
 }
 
-form fieldset .email {
+form fieldset .container .email {
   position: absolute;
-  top: 5.5em;
+  top: 5em;
 }
 
-form fieldset .checkbox {
+form fieldset .container .checkbox {
   -webkit-box-ordinal-group: 6;
       -ms-flex-order: 5;
           order: 5;
@@ -230,7 +244,7 @@ form fieldset .checkbox {
   margin-left: 5%;
 }
 
-form fieldset .checkbox a {
+form fieldset .container .checkbox a {
   color: #2B2B51;
   text-decoration: underline;
 }
@@ -254,6 +268,19 @@ input[type="submit"]:hover {
 @media only screen and (max-width: 1720px) {
   .gradient .info {
     width: 45%;
+  }
+  .gradient .info fieldset .country {
+    top: 0.7em;
+    left: 4em;
+  }
+  .gradient .info fieldset .name {
+    top: 0.7em;
+  }
+  .gradient .info fieldset .phone {
+    top: 5em;
+  }
+  .gradient .info fieldset .email {
+    top: 5em;
   }
 }
 
@@ -301,8 +328,18 @@ input[type="submit"]:hover {
   .gradient .info {
     width: 80%;
   }
-  .gradient .country {
+  .gradient .info fieldset .country {
+    top: 0.7em;
     left: 4em;
+  }
+  .gradient .info fieldset .name {
+    top: 0.7em;
+  }
+  .gradient .info fieldset .phone {
+    top: 5em;
+  }
+  .gradient .info fieldset .email {
+    top: 5em;
   }
   h3 {
     font-size: 2.5em;
@@ -388,17 +425,17 @@ input[type="submit"]:hover {
     text-align: center;
   }
   .gradient .info fieldset .country {
-    top: 0.5em;
+    top: 0em;
     left: 2em;
   }
   .gradient .info fieldset .name {
-    top: 3.2em;
+    top: 3em;
   }
   .gradient .info fieldset .phone {
-    top: 6.9em;
+    top: 6.7em;
   }
   .gradient .info fieldset .email {
-    top: 10.5em;
+    top: 10em;
   }
   input[type="submit"] {
     width: 90%;
@@ -409,13 +446,26 @@ input[type="submit"]:hover {
   }
 }
 
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 375px) {
   .gradient .info {
     width: 95%;
   }
   .gradient .info fieldset .input:hover .phone, .gradient .info fieldset .input:hover .name, .gradient .info fieldset .input:hover .email {
     margin-top: 2%;
     font-size: 0.9em;
+  }
+  .gradient .info fieldset .country {
+    top: 0em;
+    left: 2em;
+  }
+  .gradient .info fieldset .name {
+    top: 3em;
+  }
+  .gradient .info fieldset .phone {
+    top: 6.7em;
+  }
+  .gradient .info fieldset .email {
+    top: 10em;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,4 +1,4 @@
-let form = document.getElementById('form');
+let form = document.getElementById('form-container');
 let btn = document.getElementById('btn');
 btn.onclick = function(event) {
     event.preventDefault();

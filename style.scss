@@ -77,13 +77,20 @@ form {
     transform: rotate(2.5deg);
     background: #F7F7F7;
     fieldset {
+        margin: 0;
+        padding: 0;
+        border: 0;
         transform: rotate(-2.5deg);
+        .container {
         position: relative;
         background: white;
         @include flex();
         flex-wrap: wrap;
-        width: 100%;
+        // width: 100%;        
     .select {
+        margin: 0;
+        padding: 0;
+        border: 0;
         width: 40%;
         margin-left: 5%;
         height: 1em;
@@ -94,7 +101,7 @@ form {
             font-size: 1.2em;       
             border: none;
             border-bottom: 1px solid gray; 
-                            
+            outline-color: transparent;                 
         }
         &:hover {
             .country {
@@ -105,6 +112,10 @@ form {
         }
     }
         .input {
+            display: inline-block;
+            margin: 0;
+            padding: 0;
+            border: 0;
             width: 40%;
             height: 3em;
             border: none;        
@@ -116,7 +127,8 @@ form {
                 height: 2.5em;
                 font-size: 1.2em; 
                 border: none;
-                border-bottom: 1px solid gray;            
+                border-bottom: 1px solid gray; 
+                outline-color: transparent;           
             }  
             &:hover {
                 .phone, .name, .email {
@@ -128,20 +140,20 @@ form {
         }
         .country {
             position: absolute;
-            top: 1em; 
-            left: 4.5em;
+            top: 0.8em; 
+            left: 4em;
         }
         .name {
             position: absolute;
-            top: 1em;       
+            top: 0.8em;       
         }
         .phone {
             position: absolute;
-            top: 5.5em;
+            top: 5em;
         }
         .email {
             position: absolute;
-            top: 5.5em;
+            top: 5em;
         }
         
         .checkbox {
@@ -157,6 +169,7 @@ form {
             
         }
     }
+}
 }
 input[type="submit"] {
     width: 40%;
@@ -176,7 +189,22 @@ input[type="submit"] {
     .gradient {
         .info {
             width: 45%;
-            
+            fieldset {
+
+                .country {
+                    top: 0.7em; 
+                    left: 4em;
+                }
+                .name {            
+                    top: 0.7em;       
+                }
+                .phone {
+                    top: 5em;
+                }
+                .email {
+                    top: 5em;
+                }
+         }
         }
     }
 }
@@ -218,9 +246,22 @@ input[type="submit"] {
     .gradient {
         .info {
             width: 80%;
-        }
-        .country {
-            left: 4em;
+            fieldset {
+
+                .country {
+                    top: 0.7em; 
+                    left: 4em;
+                }
+                .name {            
+                    top: 0.7em;       
+                }
+                .phone {
+                    top: 5em;
+                }
+                .email {
+                    top: 5em;
+                }
+         }
         }
     }
     h3 {
@@ -329,17 +370,17 @@ input[type="submit"] {
                     text-align: center;
                 }
                 .country {                    
-                    top: 0.5em; 
+                    top: 0em; 
                     left: 2em;
                 }
                 .name {
-                    top: 3.2em;       
+                    top: 3em;       
                 }
                 .phone {                    
-                    top: 6.9em;
+                    top: 6.7em;
                 }
                 .email {                    
-                    top: 10.5em;
+                    top: 10em;
                 }
             }
         }
@@ -350,7 +391,7 @@ input[type="submit"] {
         order: 6;
     }
 }
-@media only screen and (max-width:320px){
+@media only screen and (max-width:375px){
    .gradient {
        .info {
            width: 95%;
@@ -365,7 +406,21 @@ input[type="submit"] {
                     }
                 }
             }
+            .country {                    
+                top: 0em; 
+                left: 2em;
+            }
+            .name {
+                top: 3em;       
+            }
+            .phone {                    
+                top: 6.7em;
+            }
+            .email {                    
+                top: 10em;
+            }
         }
+        
        }
    } 
 }
