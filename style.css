@@ -10,6 +10,7 @@ body {
 h3 {
   font-size: 3em;
   color: #FF7302;
+  text-align: center;
 }
 
 .menu, .footer {
@@ -250,7 +251,13 @@ input[type="submit"]:hover {
   background: linear-gradient(-45deg, #0073F0, #2B2B51);
 }
 
-@media only screen and (max-width: 1360px) {
+@media only screen and (max-width: 1720px) {
+  .gradient .info {
+    width: 45%;
+  }
+}
+
+@media only screen and (max-width: 1366px) {
   .gradient {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
@@ -275,6 +282,140 @@ input[type="submit"]:hover {
   }
   .gradient .info h1, .gradient .info h2, .gradient .info p {
     text-align: center;
+  }
+  .gradient .country {
+    left: 6em;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .gradient .info {
+    width: 75%;
+  }
+  .gradient .country {
+    left: 5em;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .gradient .info {
+    width: 80%;
+  }
+  .gradient .country {
+    left: 4em;
+  }
+  h3 {
+    font-size: 2.5em;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  h3 {
+    font-size: 2em;
+  }
+  .gradient .info .select {
+    width: 90%;
+    height: 2.5em;
+  }
+  .gradient .info .select select {
+    font-size: 1em;
+  }
+  .gradient .info .select:hover .country {
+    margin-top: 0%;
+  }
+  .gradient .info fieldset .input {
+    width: 90%;
+  }
+  .gradient .info fieldset .input input {
+    font-size: 1em;
+  }
+  .gradient .info fieldset .input:hover .phone, .gradient .info fieldset .input:hover .name, .gradient .info fieldset .input:hover .email {
+    margin-top: 2%;
+    font-size: 0.9em;
+  }
+  .gradient .info fieldset .checkbox {
+    width: 90%;
+    text-align: center;
+  }
+  .gradient .info fieldset .country {
+    top: 0.5em;
+    left: 3em;
+  }
+  .gradient .info fieldset .name {
+    top: 3.2em;
+  }
+  .gradient .info fieldset .phone {
+    top: 6.9em;
+  }
+  .gradient .info fieldset .email {
+    top: 11em;
+  }
+  input[type="submit"] {
+    width: 90%;
+    height: 2em;
+    -webkit-box-ordinal-group: 7;
+        -ms-flex-order: 6;
+            order: 6;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  h3 {
+    font-size: 1.5em;
+  }
+  .gradient .laptop {
+    height: 20em;
+  }
+  .gradient .info .select {
+    width: 90%;
+    height: 2.5em;
+  }
+  .gradient .info .select:hover .country {
+    margin-top: 0%;
+  }
+  .gradient .info fieldset .input {
+    width: 90%;
+  }
+  .gradient .info fieldset .input input {
+    font-size: 1em;
+  }
+  .gradient .info fieldset .input:hover .phone, .gradient .info fieldset .input:hover .name, .gradient .info fieldset .input:hover .email {
+    margin-top: 2%;
+    font-size: 0.9em;
+  }
+  .gradient .info fieldset .checkbox {
+    width: 90%;
+    text-align: center;
+  }
+  .gradient .info fieldset .country {
+    top: 0.5em;
+    left: 2em;
+  }
+  .gradient .info fieldset .name {
+    top: 3.2em;
+  }
+  .gradient .info fieldset .phone {
+    top: 6.9em;
+  }
+  .gradient .info fieldset .email {
+    top: 10.5em;
+  }
+  input[type="submit"] {
+    width: 90%;
+    height: 2em;
+    -webkit-box-ordinal-group: 7;
+        -ms-flex-order: 6;
+            order: 6;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .gradient .info {
+    width: 95%;
+  }
+  .gradient .info fieldset .input:hover .phone, .gradient .info fieldset .input:hover .name, .gradient .info fieldset .input:hover .email {
+    margin-top: 2%;
+    font-size: 0.9em;
   }
 }
 /*# sourceMappingURL=style.css.map */
